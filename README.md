@@ -2,7 +2,7 @@
 
 First, create the venv:
 ```
-uv venv --python 3.10 --seed
+uv venv --python 3.12 --seed
 source .venv/bin/activate
 uv sync
 ```
@@ -10,16 +10,17 @@ uv sync
 Login to the HF CLI:
 ```sh
 huggingface-cli login 
-```
+``` 
+or set HF_TOKEN environment variable
 
 And enter the configs you like:
 ```sh
 chmod +x run.sh
 ./run.sh --username <username> \
-         --repo Medbullets \
-         --private false
+         --repo MedRedQA \
+         --private true
 ```
 
-Voila! The dataset now lives [on HuggingFace](https://huggingface.co/datasets/mkieffer/Medbullets).
+Voila! The dataset now lives [on HuggingFace](https://huggingface.co/datasets/<username>/medredqa.
 
-All credit belongs to the [original authors](https://github.com/HanjieChen/ChallengeClinicalQA)
+All credit belongs to the [original authors](https://data.csiro.au/collection/csiro:62454)
